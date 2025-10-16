@@ -4,6 +4,7 @@ metadata:
   name: {{ include "ai-reel-generator-charts.fullname" . }}
   labels:
     {{- include "ai-reel-generator-charts.labels" . | nindent 4 }}
+  namespace: {{ .Release.Namespace }}
 spec:
   type: {{ .Values.service.type }}
   ports:
