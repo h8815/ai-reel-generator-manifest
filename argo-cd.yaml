@@ -8,7 +8,7 @@ spec:
   source: # Git repo details
     repoURL: https://github.com/h8815/ai-reel-generator-manifest.git
     targetRevision: HEAD
-    path: /ai-reel-generator-charts/
+    path: ai-reel-generator-charts/
   destination: # Where to deploy
     server: https://kubernetes.default.svc # Target cluster
   syncPolicy: # Sync settings
