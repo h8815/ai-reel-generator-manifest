@@ -2,18 +2,19 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: ai-reel-generator
-  namespace: argocd # Argo CD namespace
+  namespace: argocd 
 spec:
-  project: default # Argo CD project
-  source: # Git repo details
+  project: default 
+  source: 
     repoURL: https://github.com/h8815/ai-reel-generator-manifest.git
     targetRevision: HEAD
     path: ai-reel-generator-charts/
-  destination: # Where to deploy
-    server: https://kubernetes.default.svc # Target cluster
-  syncPolicy: # Sync settings
+  destination: 
+    server: https://kubernetes.default.svc 
+  syncPolicy: 
     syncOptions:
       - CreateNamespace=true # Create ns if missing
     automated: # Auto-sync enabled
       prune: true # Remove extra resources
       selfHeal: true # Fix manual changes
+
